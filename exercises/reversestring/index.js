@@ -22,9 +22,12 @@ function reverse2(str) {
 }
 
 function reverse3(str) {
-  return str
-    .split("")
-    .reduce((reversed, character) => character + reversed, "");
+  return (
+    str
+      // turn str to array
+      .split("")
+      .reduce((reversed, character) => character + reversed, "")
+  );
 }
 
 //testing
