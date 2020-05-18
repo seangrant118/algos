@@ -21,6 +21,13 @@ function reverse2(str) {
   return reversed;
 }
 
+function reverse3(str) {
+  return str
+    .split("")
+    .reduce((reversed, character) => character + reversed, "");
+}
+
 //testing
 console.log(reverse1("hello"));
-console.log(reverse2("hello"));
+console.log(reverse2("fish"));
+console.log(reverse3("apple"));
