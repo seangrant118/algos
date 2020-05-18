@@ -5,13 +5,8 @@
 // reverse('hello') === 'olleh
 
 function reverse1(str) {
-  // turns the string into an array
-  const arr = str.split("");
-
-  //reverses array using built in array.reverse method
-  arr.reverse();
-
-  return arr.join("");
+  // turn str into arr, reverse, join
+  return str.split("").reverse().join("");
 }
 
 //testing
