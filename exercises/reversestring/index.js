@@ -9,5 +9,18 @@ function reverse1(str) {
   return str.split("").reverse().join("");
 }
 
+function reverse2(str) {
+  // declare temp variable
+  let reversed = "";
+
+  // iterate through str
+  for (let character of str) {
+    reversed = character + reversed;
+  }
+
+  return reversed;
+}
+
 //testing
 console.log(reverse1("hello"));
+console.log(reverse2("hello"));
