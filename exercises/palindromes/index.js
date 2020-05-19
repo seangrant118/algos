@@ -1,6 +1,6 @@
 //Given a string, return true if the string is a pallendrome, or false if it is not
 
-function myPallindrome(str) {
+function myPalindrome(str) {
   let arr = str.split("");
   let reversed = "";
 
@@ -18,10 +18,14 @@ function palindrome1(str) {
   return str === reversed;
 }
 
-function palindrome2(str) {}
+function palindrome2(str) {
+  return str.split("").every((char, i) => {
+    return char === str[str.length - i - 1];
+  });
+}
 
-console.log(myPallindrome("abba"));
-console.log(myPallindrome("hello"));
+console.log(myPalindrome("abba"));
+console.log(myPalindrome("hello"));
 
 console.log(palindrome1("abba"));
 console.log(palindrome1("hello"));
