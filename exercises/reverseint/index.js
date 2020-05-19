@@ -19,4 +19,12 @@ function myReverseInt(int) {
   return reverseInt;
 }
 
+function reverseInt1(int) {
+  const sign = Math.sign(int);
+  const reversed = int.toString().split("").reverse().join("");
+
+  return parseInt(reversed) * sign;
+}
+
 console.log(myReverseInt(997));
+console.log(reverseInt1(-991));
