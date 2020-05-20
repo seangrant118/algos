@@ -2,6 +2,8 @@
 //ignore spaces and punctuation
 // capital letters = lowercase
 
+// Solution 1 ------------------------------------------------------------
+
 function anagram(strA, strB) {
   let strAL = strA.toLowerCase();
   let strBL = strB.toLowerCase();
@@ -36,6 +38,8 @@ function anagram(strA, strB) {
   return true;
 }
 
+// Solution 2 ------------------------------------------------------------
+
 function anagram2(a, b) {
   const builtA = buildCharMap(a);
   const builtB = buildCharMap(b);
@@ -63,5 +67,18 @@ function buildCharMap(str) {
   return charMap;
 }
 
+// Solution 3 ------------------------------------------------------------
+
+function anagram3(a, b) {
+  return cleanString(a) === cleanString(b);
+}
+
+function cleanString(str) {
+  return str.replace(/[^\w]/g, "").toLowerCase().split("").sort().join("");
+}
+
+// -----------------------------------------------------------------------------
+
 // console.log(anagram("RAIL saftey!", "fairy tales"));
-console.log(anagram2("RAIL saftey!", "fairy tales"));
+// console.log(anagram2("RAIL saftey!", "fairy tales"));
+console.log(anagram3("RAIL saftey!", "fairy tales"));
