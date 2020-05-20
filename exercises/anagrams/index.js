@@ -36,4 +36,32 @@ function anagram(strA, strB) {
   return true;
 }
 
-console.log(anagram("RAIL saftey!", "fairy tales"));
+function anagram2(a, b) {
+  const builtA = buildCharMap(a);
+  const builtB = buildCharMap(b);
+
+  if (Object.keys(builtA).length !== Object.keys(builtB).length) {
+    return false;
+  }
+
+  for (let char in builtB) {
+    if (builtB[char] !== builtA[char]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function buildCharMap(str) {
+  const charMap = {};
+
+  for (let char of str.replace(/[^\w]/g, "").toLowerCase()) {
+    charMap[char] = charMap[char] + 1 || 1;
+  }
+
+  return charMap;
+}
+
+// console.log(anagram("RAIL saftey!", "fairy tales"));
+console.log(anagram2("RAIL saftey!", "fairy tales"));
