@@ -6,8 +6,11 @@ function anagram(strA, strB) {
   let strAL = strA.toLowerCase();
   let strBL = strB.toLowerCase();
 
-  let smashedStrA = strAL.replace(/\s/g, "");
-  let smashedStrB = strBL.replace(/\s/g, "");
+  let smashedStrA = strAL.replace(/[^\w]/g, "");
+  let smashedStrB = strBL.replace(/[^\w]/g, "");
+
+  console.log(smashedStrB);
+  console.log(smashedStrA);
 
   let objA = {};
   let objB = {};
@@ -26,7 +29,11 @@ function anagram(strA, strB) {
     }
   }
 
+  if (Object.keys(objA).length !== Object.keys(objB).length) {
+    return false;
+  }
+
   return true;
 }
 
-console.log(anagram("RAIL saftey", "fairy tales"));
+console.log(anagram("RAIL saftey!", "fairy tales"));
