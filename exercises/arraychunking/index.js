@@ -16,4 +16,20 @@ function chunk(arr, s) {
   return chunked;
 }
 
-console.log(chunk([1, 2, 3, 4, 5, 6, 7, 8], 3));
+function chunk2(arr, s) {
+  const chunked = [];
+
+  for (let el of arr) {
+    const last = chunked[chunked.length - 1];
+
+    if (!last || last.length === s) {
+      chunked.push([el]);
+    } else {
+      last.push(el);
+    }
+  }
+
+  return chunked;
+}
+
+console.log(chunk2([1, 2, 3, 4, 5, 6, 7, 8], 3));
