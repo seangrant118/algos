@@ -32,4 +32,16 @@ function chunk2(arr, s) {
   return chunked;
 }
 
-console.log(chunk2([1, 2, 3, 4, 5, 6, 7, 8], 3));
+function chunk3(arr, s) {
+  const chunked = [];
+  let idx = 0;
+
+  while (idx < arr.length) {
+    chunked.push(arr.slice(idx, idx + s));
+    idx += s;
+  }
+
+  return chunked;
+}
+
+console.log(chunk3([1, 2, 3, 4, 5, 6, 7, 8], 3));
