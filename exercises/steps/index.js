@@ -52,4 +52,23 @@ function steps2(n) {
   }
 }
 
-steps2(5);
+// Solution 3 -----------------------------------------------------
+function steps3(n, row = 0, stair = "") {
+  if (n === row) {
+    return;
+  }
+
+  if (n === stair.length) {
+    console.log("'" + stair + "'");
+    return steps3(n, row + 1);
+  }
+
+  if (stair.length <= row) {
+    stair += "#";
+  } else {
+    stair += " ";
+  }
+  steps3(n, row, stair);
+}
+
+steps3(4);
