@@ -21,12 +21,22 @@ function pyramid(n, row = 0, step = "") {
   }
 
   if (n * 2 - 1 === step.length) {
-    console.log(step);
-    pyramid(n, row + 1);
+    console.log("'" + step + "'");
+    return pyramid(n, row + 1);
   }
 
   if (row + 1 === n) {
     step += "#";
+    return pyramid(n, row, step);
+  }
+
+  const midpoint = Math.floor((2 * n + 1) / 2);
+
+  if (midpoint - row <= step.length + 1 && midpoint + row >= step.length + 1) {
+    step += "#";
+    pyramid(n, row, step);
+  } else {
+    step += " ";
     pyramid(n, row, step);
   }
 }
@@ -48,4 +58,4 @@ function pyramid2(n) {
   }
 }
 
-pyramid2(3);
+pyramid(3);
