@@ -27,4 +27,17 @@ function capitalize2(str) {
 }
 
 // Soulution 3 -----------------------------------------------------
-console.log(capitalize2("capitalize this sentence"));
+function capitalize3(str) {
+  const words = [];
+
+  for (let word of str.split(" ")) {
+    words.push(word[0].toUpperCase() + word.slice(1));
+  }
+
+  return words.join(" ");
+}
+
+// Soulution 4 -----------------------------------------------------
+function capitalize4(str) {}
+
+console.log(capitalize4("capitalize this sentence"));
