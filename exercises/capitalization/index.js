@@ -1,8 +1,9 @@
 // Capitalize the first letter of each word in the string, then return the string
 
+// Soulution 1 -----------------------------------------------------
+
 function capitalize(str) {
   const arr = str.split(" ");
-  console.log(arr);
   const newArr = [];
 
   arr.forEach((word) => {
@@ -11,4 +12,19 @@ function capitalize(str) {
 
   return newArr.join(" ");
 }
-console.log(capitalize("capitalize this sentence"));
+
+// Soulution 2 -----------------------------------------------------
+
+function capitalize2(str) {
+  const arr = str.split(" ");
+  const newArr = [];
+
+  arr.forEach((word) => {
+    newArr.push(word[0].toUpperCase() + word.slice(1));
+  });
+
+  return newArr.join(" ");
+}
+
+// Soulution 3 -----------------------------------------------------
+console.log(capitalize2("capitalize this sentence"));
