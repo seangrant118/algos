@@ -24,6 +24,7 @@ function fib(n) {
 }
 
 // Recursive Solution -----------------------------------------------------------
+// Runtime Complexity O(n^2)
 
 function fibR(n) {
   if (n < 2) {
@@ -33,4 +34,31 @@ function fibR(n) {
   return fibR(n - 1) + fib(n - 2);
 }
 
-console.log(fibR(5));
+// Improved Recursive Solution (memoization)
+// Runetime Complexity O()
+
+function memoize(fn) {
+  const cache = {};
+  return function (...args) {
+    if (cache[args]) {
+      return cache[args];
+    }
+
+    const result = fn.apply(this, args);
+    cache[args] = result;
+
+    return result;
+  };
+}
+
+function slowFib(n) {
+  if (n < 2) {
+    return n;
+  }
+
+  return slowFib(n - 1) + fib(n - 2);
+}
+
+const fastFib = memoize(slowFib);
+
+console.log(fastFib(10));
