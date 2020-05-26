@@ -8,6 +8,9 @@
 // Example:
 //   fib(4) === 3
 
+// Iterative Solution ---------------------------------------------------------
+// Runetime complexity O(n)
+
 function fib(n) {
   const result = [0, 1];
 
@@ -20,4 +23,14 @@ function fib(n) {
   return result[n];
 }
 
-console.log(fib(8));
+// Recursive Solution -----------------------------------------------------------
+
+function fibR(n) {
+  if (n < 2) {
+    return n;
+  }
+
+  return fibR(n - 1) + fib(n - 2);
+}
+
+console.log(fibR(5));
