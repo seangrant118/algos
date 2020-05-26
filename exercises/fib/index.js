@@ -11,7 +11,7 @@
 // Iterative Solution ---------------------------------------------------------
 // Runetime complexity O(n)
 
-function fib(n) {
+function fibIterative(n) {
   const result = [0, 1];
 
   for (let i = 2; i <= n; i++) {
@@ -51,14 +51,14 @@ function memoize(fn) {
   };
 }
 
-function slowFib(n) {
+function fib(n) {
   if (n < 2) {
     return n;
   }
 
-  return slowFib(n - 1) + fib(n - 2);
+  return fib(n - 1) + fib(n - 2);
 }
 
-const fastFib = memoize(slowFib);
+fib = memoize(fib);
 
-console.log(fastFib(10));
+console.log(fib(9));
