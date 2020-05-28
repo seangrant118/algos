@@ -88,7 +88,7 @@ class LinkedList {
     }
   }
 
-  getAt() {
+  getAt(i) {
     let counter = 0;
     let node = this.head;
 
@@ -101,5 +101,22 @@ class LinkedList {
       node = node.next;
     }
     return null;
+  }
+
+  removeAt(i) {
+    if (!this.head) {
+      return;
+    }
+
+    if (i === 0) {
+      this.head = this.head.next;
+    }
+
+    const prev = this.getAt(i - 1);
+    if (!prev || !prev.next) {
+      return;
+    }
+
+    prev.next = prev.next.next;
   }
 }
