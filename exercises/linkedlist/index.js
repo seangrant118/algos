@@ -75,4 +75,16 @@ class LinkedList {
 
     prev.next = null;
   }
+
+  insertLast(data) {
+    const last = this.getLast();
+
+    if (last) {
+      // Nodes exist
+      last.next = new Node(data);
+    } else {
+      // Chain is empty
+      this.head = new Node(data);
+    }
+  }
 }
