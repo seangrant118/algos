@@ -8,5 +8,13 @@
 <body>
   <h1>Click the button</h1>
   <button>Me!</button>
-  <script></script>
+  <script>
+    $("button").on("click", () => {
+      console.log("hello");
+    });
+
+    $("button").trigger("click");
+
+    $("button").off("click");
+  </script>
 </body>
