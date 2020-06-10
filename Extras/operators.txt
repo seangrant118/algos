@@ -1,0 +1,1 @@
+delete removes a property from an object
