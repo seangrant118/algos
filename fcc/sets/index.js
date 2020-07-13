@@ -48,8 +48,21 @@ function mySet() {
       unionSet.add(e);
     });
     secondSet.forEach(function (e) {
+      // wont contain duplicates
       unionSet.add(e);
     });
     return unionSet;
+  };
+
+  // return the intersections of the two sets as a new set
+  this.intersection = function (otherSet) {
+    var intersectionSet = new mySet();
+    var firstSet = this.values();
+    firstSet.forEach(function (e) {
+      if (otherSet.has(e)) {
+        intersectionSet.add(e);
+      }
+      return intersectionSet;
+    });
   };
 }
