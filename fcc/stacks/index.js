@@ -3,7 +3,7 @@
 // Functions: Push, pop, peek, length
 
 const letters = [];
-const word = "racecar";
+const word = "this";
 let reverse = "";
 
 // put letters of word into stack
@@ -23,3 +23,35 @@ if (reverse === word) {
 } else {
   console.log(word + " is not a palindrome");
 }
+
+// create a stack
+const Stack = function () {
+  this.count = 0;
+  this.storage = {};
+
+  // Add value onto the end of a stack
+  this.push = function (value) {
+    this.storage[this.count] = value;
+    this.count++;
+  };
+
+  // Removes and returns the value at the end of a stack
+  this.pop = function () {
+    if (this.count === 0) {
+      return undefined;
+    }
+
+    this.count--;
+    var result = this.storage[this.count];
+    delete this.storage[this.count];
+    return result;
+  };
+
+  this.size = function () {
+    return this.count;
+  };
+
+  this.peek = function () {
+    return this.storage[this.count - 1];
+  };
+};
