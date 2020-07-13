@@ -65,4 +65,24 @@ function mySet() {
       return intersectionSet;
     });
   };
+
+  // return the difference of two sets as a new set
+  this.difference = function (otherSet) {
+    var differenceSet = new mySet();
+    var firstSet = this.values;
+    firstSet.forEach(function (e) {
+      if (!otherSet.has(e)) {
+        differenceSet.add(e);
+      }
+    });
+    return differenceSet;
+  };
+
+  // will test if the set is a subset of a difference set
+  this.subset = function (otherSet) {
+    var firstSet = this.values();
+    return firstSet.every(function (value) {
+      return otherSet.has(value);
+    });
+  };
 }
