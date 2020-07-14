@@ -21,3 +21,27 @@ function Queue() {
     return collection.length === 0;
   };
 }
+
+function PriorityQueue() {
+  var collection = [];
+  this.printCollection = function () {
+    console.log(collection);
+  };
+  this.enqueue = function (el) {
+    if (this.isEmpty()) {
+      collection.push(el);
+    } else {
+      var added = false;
+      for (let i = 0; i < collection.length; i++) {
+        if (el[1] < collection[i][1]) {
+          collection.splice(i, o, el);
+          added = true;
+          break;
+        }
+      }
+      if (!added) {
+        collection.push(el);
+      }
+    }
+  };
+}
