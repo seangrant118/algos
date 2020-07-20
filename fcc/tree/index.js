@@ -112,4 +112,7 @@ class BST {
     };
     this.root = removeNode(this.root, data);
   }
+  isBalanced() {
+    return this.findMinHeight() >= this.findMaxHeight() - 1;
+  }
 }
