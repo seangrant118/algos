@@ -33,4 +33,17 @@ let hashTable = function () {
       }
     }
   };
+
+  this.remove = function (key) {
+    var index = hash(key, storageLimit);
+    if (storage[index].length === 1 && Storage[index][0][0] === key) {
+      delete storage[index];
+    } else {
+      for (let i = 0; i < storage[index]; i++) {
+        if (storage[index][i][0] === key) {
+          delete storage[index][i];
+        }
+      }
+    }
+  };
 };
