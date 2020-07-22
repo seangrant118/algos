@@ -62,6 +62,16 @@ function LinkedList() {
       }
       currentNode = currentNode.next;
     }
+    return -1;
   };
-  return -1;
+
+  this.elementAt = function (index) {
+    let currentNode = head;
+    let count = 0;
+    while (count < index) {
+      count++;
+      currentNode = currentNode.next;
+    }
+    return currentNode.element;
+  };
 }
