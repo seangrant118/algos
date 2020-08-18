@@ -13,3 +13,21 @@ function twoSumsLesser(nums, target) {
     });
   });
 }
+
+// More efficient solution
+
+function twoSumsGreater(nums, target) {
+  const prevValues = {};
+  for (let i = 0; i < nums.length; i++) {
+    const currentValue = nums[i];
+    const neededValue = target - currentValue;
+
+    if (prevValues[neededValue] != null) {
+      return [prevValues[neededValue], i];
+    } else {
+      prevValues[currentValue] = i;
+    }
+  }
+
+  return [];
+}
