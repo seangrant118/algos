@@ -30,3 +30,6 @@ function outer() {
   inner(); // 3
 }
 outer(); // und
+
+// what is the output
+console.log(typeof typeof 1); // string
