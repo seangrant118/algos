@@ -37,3 +37,6 @@ for (let i of a) {
 }
 
 let b = Object.keys(obj);
+
+// es6
+let bSet = new Set(a);
