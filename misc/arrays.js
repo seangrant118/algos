@@ -26,3 +26,14 @@ for (let i = 0; i < len; i++) {
     _temp = a[i];
   }
 }
+
+//Obj
+//n
+
+let obj = {};
+
+for (let i of a) {
+  obj[i] = true;
+}
+
+let b = Object.keys(obj);
