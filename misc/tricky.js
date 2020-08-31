@@ -63,5 +63,10 @@ let profile = {
 Object.seal(profile);
 profile.age = 3;
 profile.name = "grant";
+Object.defineProperty(profile, "age", {
+  value: 3,
+  writable: false,
+});
+profile.age = 4;
 
 console.log(profile); //name:grant
