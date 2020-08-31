@@ -70,3 +70,7 @@ Object.defineProperty(profile, "age", {
 profile.age = 4;
 
 console.log(profile); //name:grant
+
+//
+
+console.log(Math.max()); //-infinity
