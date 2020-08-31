@@ -39,3 +39,29 @@ let func = function () {
 
 console.log(5 < 6 < 7); // true
 console.log(7 > 6 > 5); // false (?true > 5) (?1>5)
+
+//
+
+let a = () => arguments; // arguments not bound in arrow func
+
+console.log(a("hi"));
+
+//
+let x = function () {
+  return {
+    message: "hi",
+  };
+};
+
+console.log(x()); //undf
+
+//
+let profile = {
+  name: "sean",
+};
+
+Object.seal(profile);
+profile.age = 3;
+profile.name = "grant";
+
+console.log(profile); //name:grant
