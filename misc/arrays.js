@@ -39,4 +39,5 @@ for (let i of a) {
 let b = Object.keys(obj);
 
 // es6
+// O
 let bSet = new Set(a);
