@@ -34,3 +34,8 @@ let func = function () {
   console.log(v);
   console.log(l);
 };
+
+//
+
+console.log(5 < 6 < 7); // true
+console.log(7 > 6 > 5); // false (?true > 5) (?1>5)
