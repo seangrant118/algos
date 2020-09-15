@@ -20,3 +20,13 @@ function reverse(str) {
   }
   return reversed.join("");
 }
+
+// recursion
+
+function reverse(str) {
+  if (str === "") {
+    return "";
+  } else {
+    return reverse(str.substr(1) + str.charAt(0));
+  }
+}
