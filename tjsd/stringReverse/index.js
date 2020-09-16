@@ -38,3 +38,10 @@ function reverse(str) {
 
   return str.split("").reverse().join("");
 }
+
+// str extension
+
+String.prototype.reverse = function () {
+  if (!this || this.length < 2) return this;
+  return this.split("").reverse.join("");
+};
