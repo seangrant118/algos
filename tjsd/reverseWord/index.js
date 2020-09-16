@@ -14,3 +14,9 @@ function reverseWords(str) {
   }
   return rev.join(" ");
 }
+
+// short
+
+function reverseWords(str) {
+  return str.split(" ").reverse();
+}
