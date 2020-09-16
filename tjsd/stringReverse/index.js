@@ -30,3 +30,11 @@ function reverse(str) {
     return reverse(str.substr(1) + str.charAt(0));
   }
 }
+
+// build in js methods
+
+function reverse(str) {
+  if (!str || str.length < 2) return str;
+
+  return str.split("").reverse().join("");
+}
