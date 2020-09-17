@@ -10,11 +10,11 @@ function firstNonRepeatingChar(str) {
     } else {
       charCount[char] = 1;
     }
+  }
 
-    for (let j in charCount) {
-      if (charCount[j] == 1) {
-        return j;
-      }
+  for (let j in charCount) {
+    if (charCount[j] == 1) {
+      return j;
     }
   }
 }
