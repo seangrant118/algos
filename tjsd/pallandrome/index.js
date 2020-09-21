@@ -8,3 +8,9 @@ function pallendrome(str) {
   }
   return true;
 }
+
+// built in method
+
+function pall(str) {
+  return str == str.split("").reverse().join("");
+}
