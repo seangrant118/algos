@@ -12,3 +12,19 @@ function sumFinder(arr, sum) {
   }
   return false;
 }
+
+function finder2(arr, sum) {
+  let differ = {};
+  let len = arr.length;
+  let subtract;
+
+  for (let i = 0; i < len; i++) {
+    subtract = sum - arr[i];
+
+    if (differ[subtract]) {
+      return true;
+    } else {
+      differ[arr[i]] = true;
+    }
+  }
+}

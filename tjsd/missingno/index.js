@@ -1,4 +1,4 @@
-function missingNumber() {
+function missingNumber(arr) {
   let n = arr.length;
   let sum = 0;
   let expectedSum = (n * (n + 1)) / 2;
