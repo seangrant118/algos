@@ -27,4 +27,6 @@ function finder2(arr, sum) {
       differ[arr[i]] = true;
     }
   }
+
+  return false;
 }
