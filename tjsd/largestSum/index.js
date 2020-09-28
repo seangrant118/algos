@@ -6,7 +6,7 @@ function largestSum(arr) {
   if (len < 2) return null;
 
   if (biggest < second) {
-    biggest = arr[1];
+    biggest = second;
     second = arr[0];
   }
 
