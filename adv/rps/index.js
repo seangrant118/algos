@@ -11,4 +11,7 @@ const rps = function (rounds) {
       play(playedSoFar + possibilities[i], rounds - 1);
     }
   };
+
+  play("", rounds);
+  return results;
 };
