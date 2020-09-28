@@ -7,5 +7,8 @@ const rps = function (rounds) {
       results.push(playedSoFar);
       return;
     }
+    for (let i = 0; i < 3; i++) {
+      play(playedSoFar + possibilities[i], rounds - 1);
+    }
   };
 };
