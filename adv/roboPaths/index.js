@@ -8,4 +8,12 @@ var MakeGrid = function (n) {
       grid[i].push(false);
     }
   }
+
+  grid.toggle = function (i, j) {
+    grid[i][j] = !grid[i][j];
+  };
+
+  grid.visited = function (i, j) {
+    return grid[i][j];
+  };
 };
