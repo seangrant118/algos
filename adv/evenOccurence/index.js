@@ -27,6 +27,7 @@ const evenOccurance = function (str) {
     if (first === undefined) {
       first = item;
     }
-    first = result.indexOf(item) < result.indexOf(first) ? item : first;
+    first = arr.indexOf(item) < arr.indexOf(first) ? item : first;
   });
+  return first;
 };
