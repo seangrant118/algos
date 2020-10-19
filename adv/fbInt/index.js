@@ -22,6 +22,33 @@ const wordTransformer = function (beginWord, endword, Wordlist) {
           counter++;
         }
       });
+      if (counter === 1) {
+        result.push(word);
+      }
     });
   };
+
+  const inner = function (base, list) {
+    counter++;
+    if (base === endword) {
+      notFound = false;
+      answer = Math.min(answer, counter);
+      return;
+    }
+    const approvedList = oneOff(base, list);
+    if (approvedList.length === 0) {
+      return;
+    }
+    for (let i = 0; i < approvedList.length; i++) {
+      inner(
+        approvedList[i],
+        list
+          .slice(0, list.indexOf(approvedList[i]))
+          .concat(list.slice(list.indexOf(approvedList[i]) + 1))
+      );
+      counter--;
+    }
+  };
+  inner(beginWord, wordList);
+  return notFound === true ? 0 : answer;
 };
