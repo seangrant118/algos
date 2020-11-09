@@ -1,3 +1,3 @@
 const songDecoder = (song) => {
-  return song.replace((/WUB/g, " "));
+  return song.replace((/(WUB)+/g, " ")).trim();
 };
