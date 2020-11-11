@@ -32,5 +32,6 @@ const alphabetPosition = (text) => {
     .toLowerCase()
     .replace(/[^a-zA-Z]/g, "")
     .split("")
-    .map((letter) => alphabet.indexOf(letter + 1));
+    .map((letter) => alphabet.indexOf(letter + 1))
+    .join("");
 };
