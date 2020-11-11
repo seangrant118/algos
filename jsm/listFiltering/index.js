@@ -33,5 +33,5 @@ const alphabetPosition = (text) => {
     .replace(/[^a-zA-Z]/g, "")
     .split("")
     .map((letter) => alphabet.indexOf(letter + 1))
-    .join("");
+    .join(" ");
 };
