@@ -26,3 +26,12 @@ function getCount2(str) {
 
   return vowelsCount;
 }
+
+// reduce
+function getCount3(str) {
+  const vowelCount = str
+    .split("")
+    .reduce((acc, letter) => (letter.match(/[aeiou]/g) ? acc + 1 : acc), 0);
+
+  return vowelCount;
+}
