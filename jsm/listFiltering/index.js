@@ -10,3 +10,11 @@ const alphabetPosition = (text) => {
     .map((letter) => alphabet.indexOf(letter + 1))
     .join(" ");
 };
+
+const alphabetPosition2 = (text) =>
+  text
+    .toUpperCase()
+    .replace(/[^a-zA-Z]/g, "")
+    .split("")
+    .map((ch) => ch.charCodeAt(0) - 64)
+    .join(" ");
