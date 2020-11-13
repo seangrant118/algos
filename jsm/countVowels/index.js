@@ -33,3 +33,8 @@ function getCount3(str) {
     .split("")
     .reduce((acc, letter) => (letter.match(/[aeiou]/g) ? acc + 1 : acc), 0);
 }
+
+//shorter
+function getCount4(str) {
+  return (str.match(/[aeiou]/gi) || []).length;
+}
