@@ -1,0 +1,5 @@
+arrays can always be used and must be used if order matters and duplicates are wanted
+
+sets are better when order matters and you only need unique values
+
+both list datastructures
