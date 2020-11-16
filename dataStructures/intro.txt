@@ -1,0 +1,5 @@
+Data structures allow you to manage Data
+Ex: Arrays, objects, maps, sets
+
+Different tasks require different data structures
+ordered lists, unordered lists, key value pairs
