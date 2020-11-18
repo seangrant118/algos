@@ -105,6 +105,20 @@ class LinkedList {
       current = current.next;
     }
   }
+
+  //Get at index
+  getAt(i) {
+    let current = this.head;
+    let count = 0;
+
+    while (current) {
+      if (count === i) {
+        console.log(current);
+      }
+      count++;
+      current = current.next;
+    }
+  }
 }
 
 const linkedList1 = new LinkedList();
