@@ -86,12 +86,23 @@ class LinkedList {
     return null;
   }
 
+  //Inserts after a certain value
   insertAfter(value, afterValue) {
     const existingNode = this.find(afterValue);
 
     if (existingNode) {
       const newNode = { value, next: existingNode.next };
       existingNode.next = newNode;
+    }
+  }
+
+  //Print list data
+  printListData() {
+    let current = this.head;
+
+    while (current) {
+      console.log(current.data);
+      current = current.next;
     }
   }
 }
