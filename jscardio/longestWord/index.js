@@ -10,5 +10,11 @@ function longestWord(sen) {
     return word.length === sorted[0].length;
   });
 
-  return longestWordArr;
+  // check if more than one array
+
+  if (longestWordArr.length === 1) {
+    return longestWordArr[0];
+  } else {
+    return longestWordArr;
+  }
 }
