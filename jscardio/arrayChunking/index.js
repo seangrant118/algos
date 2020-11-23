@@ -11,3 +11,19 @@ function chunkArr(arr, len) {
 
   return chunkedArr;
 }
+
+function chunkArr2(arr, len) {
+  const chunkedArr = [];
+
+  arr.forEach(function (val) {
+    const last = chunkedArr[chunkedArr.length - 1];
+
+    if (!last || last.length === len) {
+      chunkedArr.push([val]);
+    } else {
+      last.push(val);
+    }
+  });
+
+  return chunkedArr;
+}
