@@ -7,3 +7,7 @@ function flattenArray(arrays) {
 function flattenArray2(arrays) {
   return [].concat.apply([], arrays);
 }
+
+function flattenArray3(arrays) {
+  return [].concat(...arrays);
+}
