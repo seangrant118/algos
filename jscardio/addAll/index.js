@@ -10,9 +10,9 @@ function addAll() {
   return total;
 }
 
-// es6 ...rest and reduce
+// es6 ...rest and foreach
 
-function addAllES6(...numbers) {
+function addAllES6(...rest) {
   let total = 0;
   numbers.forEach((num) => (total += num));
 }
