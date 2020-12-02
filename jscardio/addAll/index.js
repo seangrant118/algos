@@ -12,7 +12,11 @@ function addAll() {
 
 // es6 ...rest and foreach
 
-function addAllES6(...rest) {
+function addAllES6(...numbers) {
   let total = 0;
   numbers.forEach((num) => (total += num));
+}
+
+function addAllReduce(...rest) {
+  return numbers.reduce((acc, cur) => acc + cur);
 }
