@@ -17,6 +17,6 @@ function addAllES6(...numbers) {
   numbers.forEach((num) => (total += num));
 }
 
-function addAllReduce(...rest) {
+function addAllReduce(...numbers) {
   return numbers.reduce((acc, cur) => acc + cur);
 }
