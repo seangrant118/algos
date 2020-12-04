@@ -6,5 +6,9 @@ function seekAndDestroy(arr) {
     return args.indexOf(arr) === -1;
   }
 
-  return arr.filter(filter);
+  return arr.filter(filterArr);
+}
+
+function seekAndDestroy2(arr, ...rest) {
+  return arr.filter((val) => !rest.includes(val));
 }
