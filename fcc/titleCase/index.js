@@ -7,3 +7,14 @@ function titleCase(str) {
 
   return words;
 }
+
+function titleCase2(str) {
+  let titled = str
+    .toLowerCase()
+    .split(" ")
+    .map((el) => {
+      return el[0].toUpperCase + el.slice(1);
+    });
+
+  return titled.join(" ");
+}
