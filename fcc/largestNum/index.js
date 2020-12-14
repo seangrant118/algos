@@ -15,6 +15,19 @@ function largestOfFOur(arr) {
   return maxes;
 }
 
+function largestOfFOur2(arr) {
+  var maxes = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; i < arr[i].length; j++) {
+      let currentEl = arr[i][j];
+      if ((currentEl = arr[i][j])) {
+        maxes[i] = currentEl;
+      }
+    }
+  }
+}
+
 largestOfFOur([
   [4, 5, 1, 3],
   [13, 27, 18, 26],
