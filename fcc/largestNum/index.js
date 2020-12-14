@@ -26,6 +26,7 @@ function largestOfFOur2(arr) {
       }
     }
   }
+  return maxes;
 }
 
 largestOfFOur([
