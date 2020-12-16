@@ -6,4 +6,8 @@ function confirmEnding(str, target) {
   return false;
 }
 
+function confirmEnding2(str, target) {
+  return str.substr(-target.length) === target;
+}
+
 confirmEnding("Sean", "n");
