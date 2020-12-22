@@ -11,4 +11,5 @@ function repeatStr2(str, n) {
   for (let i = 0; i < num; i++) {
     final += str;
   }
+  return final;
 }
