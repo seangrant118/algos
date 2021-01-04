@@ -4,8 +4,7 @@ function chunkArrInGroups(arr, size) {
   var groups = [];
 
   while (arr.length > 0) {
-    groups.push(arr.slice(0, size));
-    arr = arr.slice(size);
+    groups.push(arr.splice(0, size));
   }
 
   return groups;
