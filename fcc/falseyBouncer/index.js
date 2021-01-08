@@ -12,4 +12,12 @@ function bouncer(arr) {
   return result;
 }
 
+// filter method
+
+function bouncer2(arr) {
+  return arr.filter((item) => {
+    return item;
+  });
+}
+
 bouncer([7, "ate", "", false, 9]);
