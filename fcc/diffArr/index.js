@@ -17,3 +17,13 @@ function diffArr(arr1, arr2) {
 
   return newArr;
 }
+
+function diffArrFilter(arr1, arr2) {
+  var combo = arr1.concat(arr2);
+
+  return combo.filter(function (num) {
+    if (arr1.indexOf(num) === -1 || arr2.indexOf(num) === -1) {
+      return num;
+    }
+  });
+}
