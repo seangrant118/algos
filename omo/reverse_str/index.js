@@ -9,4 +9,10 @@ function reverseStr(str) {
   return newArr.join("");
 }
 
-console.log(reverseStr("hello"));
+//optimize
+
+function reverseStr2(str) {
+  return str.split("").reverse("").join("");
+}
+
+console.log(reverseStr2("hello"));
