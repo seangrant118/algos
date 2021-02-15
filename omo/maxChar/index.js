@@ -17,4 +17,26 @@ function maxChar(str) {
   return max[0];
 }
 
-console.log(maxChar("hello world"));
+// optimize
+
+function maxChar2(str) {
+  const characters = {};
+
+  for (let char of str) {
+    characters[char] = characters[char] + 1 || 1;
+  }
+
+  let maxCount = 0;
+  let maxCharacter = null;
+
+  for (let char in characters) {
+    if (characters[char] > maxCount) {
+      maxCount = characters[char];
+      maxCharacter = char;
+    }
+  }
+
+  return maxCharacter;
+}
+
+console.log(maxChar2("helloooooooo world"));
