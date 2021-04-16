@@ -1,0 +1,13 @@
+--- Classes --- 
+
+[ABC] --- character set --- Match any character in the set
+[^ABC] --- negated set --- Match any character not in the set
+[A-Z] --- range --- Matches a character having a character code between the two specificed characters, inclusive
+. --- dot --- matches any character except line breaks. Equivalent to [^\n\r]
+[\s\S] --- match any --- A character set that can be used to match any character, including line breaks, without the dotall flags, [^] is an alternative (not supported on all browsers)
+\w --- word --- Matches any word character (alphanumeric & underscore). Only matches low-ascii characters (no accented or non roman characters, Equivalent to [A-Za-z0-9_])
+\W --- not word --- Matches any character that is not a word character
+\d --- digit --- Matches any digit character
+\D --- not digit -- Matches any non digit
+\s --- whitespace --- matches any white space characters (spaces, tabs, linebreaks)
+\S --- not whitespace --- matches any non whitespace characters
