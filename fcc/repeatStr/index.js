@@ -15,10 +15,10 @@ function repeatStr2(str, n) {
 }
 
 //Recursion
-function repeatStr3(str, n) {
-  if (n < 0) return "";
+function repeatStr3(str, num) {
+  if (num <= 0) return "";
 
-  if (n === 1) return str;
+  if (num === 1) return str;
 
   return str + repeatStr3(str, num - 1);
 }
