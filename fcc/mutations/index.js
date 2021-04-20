@@ -2,7 +2,7 @@
 
 function mutation(arr) {
   var firstWord = arr[0].toLowerCase();
-  var secondWord = arr[2].toLowerCase();
+  var secondWord = arr[1].toLowerCase();
 
   for (let i = 0; i < secondWord.length; i++) {
     if (firstWord.indexOf(secondWord[i]) < 0) {
