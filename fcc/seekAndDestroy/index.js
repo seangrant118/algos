@@ -1,5 +1,5 @@
 function destroyer(arr) {
-  const args = Array.from(arguments).splice(0, 1);
+  const args = Array.from(arguments).slice(1);
   result = [];
 
   for (let num of arr) {
@@ -7,6 +7,8 @@ function destroyer(arr) {
       result.push(num);
     }
   }
+
+  console.log(result);
 
   return result;
 }
