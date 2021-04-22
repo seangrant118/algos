@@ -9,5 +9,15 @@ function spinalCase(str) {
   return str.replace(regex, "-").toLowerCase();
 }
 
+function spinalCase2(str) {
+  // Replace low-upper case to low-space-uppercase
+  str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
+  // Split on whitespace and underscores and join with dash
+  return str
+    .toLowerCase()
+    .split(/(?:_| )+/)
+    .join("-");
+}
+
 // test here
 spinalCase("This Is Spinal Tap");
