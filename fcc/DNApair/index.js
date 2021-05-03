@@ -24,3 +24,16 @@ function pairElement(str) {
 
   return paired;
 }
+
+function pairElement2(str) {
+  var pairs = {
+    A: "T",
+    T: "A",
+    C: "G",
+    G: "C",
+  };
+  //split string into array of characters
+  var arr = str.split("");
+  //map character to array of character and matching pair
+  return arr.map((x) => [x, pairs[x]]);
+}
