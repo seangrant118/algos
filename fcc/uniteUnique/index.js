@@ -16,4 +16,18 @@ function uniteUnique(arr1, arr2, arr3) {
   return finalArr;
 }
 
-//commit
+function uniteUnique2(arr1, arr2, arr3) {
+  let newArr;
+
+  let args = Array.prototype.slice.call(arguments);
+
+  newArr = args.reduce(function (arrA, arrB) {
+    return arrA.concat(
+      arrB.filter(function (i) {
+        return arrA.indexOf(i) === -1;
+      })
+    );
+  });
+
+  return newArr;
+}
