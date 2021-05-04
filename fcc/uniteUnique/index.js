@@ -31,3 +31,18 @@ function uniteUnique2(arr1, arr2, arr3) {
 
   return newArr;
 }
+
+function uniteUnique3(arr1, arr2, arr3) {
+  let args = [...arguments];
+  let results = [];
+
+  for (let i = 0; i < args.length; i++) {
+    for (let j = 0; j < args[i].length; j++) {
+      if (!results.includes(args[i][j])) {
+        results.push(args[i][j]);
+      }
+    }
+  }
+
+  return results;
+}
