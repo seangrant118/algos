@@ -66,3 +66,11 @@ function uniteUnique5(...arrays) {
 
   return [...new Set(flat)];
 }
+
+function uniteUnique6(...arr) {
+  return [...new Set(arr.flat())];
+}
+
+// or
+
+const uniteUnique7 = (...arr) => [...new Set(arr.flat())];
