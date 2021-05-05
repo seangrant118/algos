@@ -46,3 +46,17 @@ function uniteUnique3(arr1, arr2, arr3) {
 
   return results;
 }
+
+function uniteUnique4() {
+  let concatArr = [];
+  let i = 0;
+  while (arguments[i]) {
+    concatArr = concatArr.concat(arguments[i]);
+    i++;
+  }
+  let uniqueArr = concatArr.filter(function (item, pos) {
+    return concatArr.indexOf(item) == pos;
+  });
+
+  return uniqueArr;
+}
