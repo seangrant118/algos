@@ -60,3 +60,9 @@ function uniteUnique4() {
 
   return uniqueArr;
 }
+
+function uniteUnique5(...arrays) {
+  const flat = [].concat(...arrays);
+
+  return [...new Set(flat)];
+}
