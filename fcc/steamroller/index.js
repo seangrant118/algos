@@ -12,3 +12,9 @@ function steamRoll(arr) {
   }
   return flattened;
 }
+
+function steamroll2(arr) {
+  const flat = [].concat(...arr);
+
+  return flat.some(Array.isArray) ? steamroll2(flat) : flat;
+}
