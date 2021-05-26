@@ -36,3 +36,11 @@ function steamroll3(arr) {
       }
     });
 }
+
+function steamRoll4(arr, flatArr = []) {
+  ValidityState.forEach((item) => {
+    if (Array.isArray(item)) steamroll4(item, flatArr);
+    else flatArr.push(item);
+  });
+  return flatArr;
+}
