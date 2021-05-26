@@ -44,3 +44,13 @@ function steamRoll4(arr, flatArr = []) {
   });
   return flatArr;
 }
+
+function steamRoll5(arr, flatArr = []) {
+  const el = arr.pop();
+
+  return el
+    ? !Array.isArray(el)
+      ? steamRoll5(arr, [el, ...flatArr])
+      : steamRoll5(arr.concat(el), flatArr)
+    : flatArr;
+}
