@@ -9,3 +9,9 @@ function truthCheck(collection, pre) {
 
   return counter == collection.length;
 }
+
+function truthCheck2(collection, pre) {
+  return collection.every(function (element) {
+    return element.hasOwnProperty(pre) && Boolean(element[pre]);
+  });
+}
