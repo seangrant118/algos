@@ -15,3 +15,8 @@ function truthCheck2(collection, pre) {
     return element.hasOwnProperty(pre) && Boolean(element[pre]);
   });
 }
+
+function truthCheck3(collection, pre) {
+  // Is everyone being true?
+  return collection.every((obj) => obj[pre]);
+}
